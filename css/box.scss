@@ -1,0 +1,60 @@
+@mixin box-content {
+  .box-heading, .box-body, .box-footer {
+    padding: $box-heading-padding;
+  }
+
+  .box-heading {
+    font-size: ceil(($font-size-base * 1.2)) !important;
+    font-weight: bold;
+  }
+}
+
+@mixin box-content-with-border {
+
+  .box-heading {
+    border-bottom: 1px solid $box-default-border;
+  }
+
+  .box-footer {
+    padding: $box-heading-padding;
+    border-top: 1px solid $box-default-border;
+  }
+}
+
+.box {
+  margin-bottom: $line-height-computed;
+  background-color: $panel-bg;
+  border: 1px solid $box-default-border;
+  border-radius: $panel-border-radius;
+  padding: 0;
+  @include box-shadow(0 1px 1px rgba(0,0,0,.05));
+  @include box-content;
+}
+
+@mixin box-top-border($color: $box-default-border) {
+  border-top: 4px solid $color;
+}
+
+.box-default {
+  @include box-top-border;
+}
+
+.box-primary {
+  @include box-top-border($brand-primary);
+}
+
+.box-success {
+  @include box-top-border($brand-success);
+}
+
+.box-warning {
+  @include box-top-border($brand-warning);
+}
+
+.box-danger {
+  @include box-top-border($brand-danger);
+}
+
+.box-border {
+  @include box-content-with-border;
+}

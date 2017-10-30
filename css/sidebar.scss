@@ -1,0 +1,77 @@
+.sidebar {
+  @extend .fullheight;
+  position: fixed;
+  background-color: $sidebar-light-color;
+  width: $sidebar-width;
+
+  .heading {
+    // width: 100%;
+    background-color: $sidebar-dark-color;
+    color: $sidebar-heading-text;
+    padding: $padding-base-vertical $padding-base-horizontal;
+    height: $navbar-height;
+
+    .logo {
+      h3 {
+        display: inline-block;
+        margin: 0;
+        font-size: 24px;
+        font-weight: bold;
+        line-height: $navbar-height - $padding-base-vertical * 2;
+      }
+      span {
+        display: inline-block;
+        font-size: 16px;
+        font-weight: normal;
+        line-height: $navbar-height - $padding-base-vertical * 2;
+      }
+    }
+  }
+
+  .body {
+    ul {
+      margin: $padding-base-vertical 0;
+      padding: $padding-base-vertical 0;
+      list-style-type: none;
+
+      li {
+
+        display: block;
+        font-weight: lighter;
+        font-size: 14px;
+
+        a {
+
+          display: block;
+          color: $sidebar-menu-text;
+          padding: $padding-base-vertical $padding-base-horizontal;
+          text-decoration: none;
+
+          &.active {
+            background-color: $sidebar-dark-color;
+            color: $brand-primary;
+          }
+
+          &:hover {
+            background-color: $brand-primary;
+            color: $sidebar-menu-text;
+          }
+        }
+      }
+    }
+  }
+}
+
+.main-content {
+  @extend .fullheight;
+  float: left;
+  margin-left: $sidebar-width;
+  background-color: $content-bg-color;
+
+  .topbar {
+    padding: $padding-base-vertical $padding-base-horizontal;
+    height: $navbar-height;
+    width: 100%;
+    border-bottom: 1px solid $navbar-default-border;
+  }
+}

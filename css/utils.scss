@@ -1,0 +1,35 @@
+$fill-bg-color: #F6F6F6;
+
+html, body {
+  height: 100% !important;
+  background-color: $fill-bg-color;
+}
+
+.center-vertical {
+  position: absolute;
+  margin: auto;
+  top: 50%;
+  left: 0;
+  right: 0;
+  @include translate(0, -50%);
+}
+
+.fullheight {
+  height: 100% !important;
+}
+
+.fullwidth {
+  width: 100% !important;
+}
+
+.container-fullheight {
+  height: 100% !important;
+}
+
+.match-width {
+  margin: 0;
+}
+
+.fill-bg {
+  background-color: $fill-bg-color;
+}

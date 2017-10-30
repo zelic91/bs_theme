@@ -158,3 +158,22 @@ input[type="button"] {
     width: 100%;
   }
 }
+
+@mixin loading-background($color: $brand-primary) {
+  background: $color url($loading-image) no-repeat 50% 50%;
+}
+
+.btn-loading {
+  @extend .disabled;
+  @include loading-background;
+  color: transparent;
+
+  &:focus {
+    color: transparent;
+  }
+
+  &:hover {
+    color: transparent;
+  }
+
+}

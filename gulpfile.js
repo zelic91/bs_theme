@@ -8,7 +8,8 @@ var config = {
   bootstrapDir: './bower_components/bootstrap-sass',
   sourceDir: './css/**/*',
   publicDir: './public',
-  fontDir: './fonts/**/*'
+  fontDir: './fonts/**/*',
+  imageDir: './images/**/*',
 };
 
 gulp.task('css', function() {
@@ -23,7 +24,8 @@ gulp.task('css', function() {
 gulp.task('prod-css', function() {
   return gulp.src('./css/app.scss')
          .pipe(sass({
-           includePaths: [config.bootstrapDir + '/assets/stylesheets']
+           includePaths: [config.bootstrapDir + '/assets/stylesheets'],
+           precision: 12
          }))
          .on('error', gutil.log)
          .pipe(cleanCSS({compatibility: 'ie8'}))
@@ -35,8 +37,13 @@ gulp.task('fonts', function() {
          .pipe(gulp.dest(config.publicDir + '/fonts'));
 });
 
+gulp.task('images', function() {
+  return gulp.src(config.imageDir)
+         .pipe(gulp.dest(config.publicDir + '/images'));
+});
+
 gulp.task('watch', function() {
-  gulp.watch([config.sourceDir, config.fontDir], ['prod-css', 'fonts']);
+  gulp.watch([config.sourceDir, config.fontDir, config.imageDir], ['prod-css', 'fonts', 'images']);
 });
 
 gulp.task('default', ['css', 'fonts']);

@@ -1,14 +1,130 @@
-$brand-primary:         darken(#1abc9c, 6.5%) !default; // #337ab7
-$brand-success:         #2ecc71 !default;
-$brand-info:            #3498db !default;
-$brand-warning:         #f39c12 !default;
-$brand-danger:          #e74c3c !default;
+// Colors
 
-$navbar-height:                    60px !default;
+$brand-primary:              darken(#1abc9c, 6.5%) !default; // #337ab7
+$brand-success:              #2ecc71 !default;
+$brand-info:                 #3498db !default;
+$brand-warning:              #f39c12 !default;
+$brand-danger:               #e74c3c !default;
 
-$font-size-base:             14px !default;
+// Sidebar
+$sidebar-dark-color:         #3E3C42;
+$sidebar-light-color:        #4F4D54;
+$content-bg-color:           #FFFFFF;
 
-$padding-base-vertical:     10px !default;
-$padding-base-horizontal:   10px !default;
+$sidebar-heading-text:       #FFFFFF;
+$sidebar-menu-text:          #FFFFFF;
+$sidebar-menu-text-active:   $brand-primary;
+$sidebar-menu-hover:         $brand-primary;
 
-$line-height-base:        1.4285714286 !default;
+$sidebar-width:              270px;
+
+
+
+// Navbar
+
+$navbar-height:              60px !default;
+$navbar-default-border:      #ddd;
+
+
+// Paddings
+
+$padding-base-vertical:      12px !default;
+$padding-base-horizontal:    14px !default;
+
+
+// Fonts
+
+$font-family:                "Fira_Sans";
+$main-font-path:             "../fonts/#{$font-family}/" !default;
+
+
+@font-face {
+  font-family:               $font-family;
+  src:                       url('#{$main-font-path}FiraSans-Regular.ttf') format('truetype');
+  font-weight:               normal;
+  font-style:                normal;
+}
+
+@font-face {
+  font-family:               $font-family;
+  src:                       url('#{$main-font-path}FiraSans-SemiBold.ttf') format('truetype');
+  font-weight:               bold;
+  font-style:                normal;
+}
+
+@font-face {
+  font-family:               $font-family;
+  src:                       url('#{$main-font-path}FiraSans-Light.ttf') format('truetype');
+  font-weight:               lighter;
+  font-style:                normal;
+}
+
+$font-size-base:             16px !default;
+$font-family-sans-serif:     $font-family, Helvetica, Arial, sans-serif !default;
+
+$line-height-base:           1.4285714286 !default;
+
+
+// Buttons
+
+$main-images-path:           "../images/" !default;
+$loading-image:              '#{$main-images-path}Spinner.svg';
+
+$btn-default-color:          #333 !default;
+$btn-default-bg:             #fff !default;
+$btn-default-border:         #ccc !default;
+
+$btn-primary-color:          #fff !default;
+$btn-primary-bg:             $brand-primary !default;
+$btn-primary-border:         $brand-primary !default;
+
+$btn-success-color:          #fff !default;
+$btn-success-bg:             $brand-success !default;
+$btn-success-border:         $brand-success !default;
+
+$btn-info-color:             #fff !default;
+$btn-info-bg:                $brand-info !default;
+$btn-info-border:            $brand-info !default;
+
+$btn-warning-color:          #fff !default;
+$btn-warning-bg:             $brand-warning !default;
+$btn-warning-border:         $brand-warning !default;
+
+$btn-danger-color:           #fff !default;
+$btn-danger-bg:              $brand-danger !default;
+$btn-danger-border:          $brand-danger !default;
+
+// Forms
+
+$input-border-focus:         $brand-primary !default;
+$input-border-bottom-height: 2px;
+
+
+// Alert
+
+$alert-success-bg:           $brand-success !default;
+$alert-success-text:         white !default;
+$alert-success-border:       $brand-success !default;
+
+$alert-info-bg:              $brand-info !default;
+$alert-info-text:            white !default;
+$alert-info-border:          $brand-info !default;
+
+$alert-warning-bg:           $brand-warning !default;
+$alert-warning-text:         white !default;
+$alert-warning-border:       $brand-warning !default;
+
+$alert-danger-bg:            $brand-danger !default;
+$alert-danger-text:          white !default;
+$alert-danger-border:        $brand-danger !default;
+
+// Box
+$box-default-border:         #ddd;
+$box-heading-padding:        $padding-base-vertical $padding-base-horizontal;
+$box-body-padding:           $padding-base-vertical $padding-base-horizontal;
+$box-footer-padding:         $padding-base-vertical $padding-base-horizontal;
+
+$box-info:                   $brand-info;
+$box-success:                $brand-success;
+$box-warning:                $brand-warning;
+$box-danger:                 $brand-danger;
