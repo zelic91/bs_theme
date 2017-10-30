@@ -12,6 +12,7 @@
     "bootstrap": "^3.3.7"
   },
   "devDependencies": {
+    "event-stream": "^3.3.4",
     "gulp": "^3.9.1",
     "gulp-bower": "0.0.13",
     "gulp-clean-css": "^3.9.0",
