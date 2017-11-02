@@ -40,11 +40,19 @@
         font-weight: lighter;
         font-size: 14px;
 
+        h6.title {
+          font-size: 14px;
+          font-weight: bold;
+          margin: $padding-sidebar-vertical 0 0 0;
+          padding: $padding-sidebar-vertical $padding-base-horizontal;
+          color: $sidebar-title-color;
+        }
+
         a {
 
           display: block;
           color: $sidebar-menu-text;
-          padding: $padding-base-vertical $padding-base-horizontal;
+          padding: $padding-sidebar-vertical $padding-base-horizontal;
           text-decoration: none;
 
           &.active {
