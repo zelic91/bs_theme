@@ -1,9 +1,9 @@
 // Colors
 
-$brand-primary:               darken(#1abc9c, 6.5%) !default; // #337ab7
-$brand-success:               #2ecc71 !default;
-$brand-info:                  #3498db !default;
-$brand-warning:               #f39c12 !default;
+$brand-primary:               darken(#FF7467, 6.5%) !default; // #337ab7
+$brand-success:               #82DABF !default;
+$brand-info:                  #FFF4ED !default;
+$brand-warning:               #FFBF6B !default;
 $brand-danger:                #e74c3c !default;
 
 // Sidebar
@@ -21,8 +21,12 @@ $sidebar-width:               270px;
 
 // Navbar
 
-$navbar-height:               60px !default;
+$navbar-height:               50px !default;
 $navbar-default-border:       #ddd;
+$navbar-app-bg:               $brand-primary;
+$navbar-app-text:             #FFF;
+$navbar-app-border:           0px;
+$navbar-app-color:            $navbar-app-text;
 
 
 // Paddings
@@ -34,28 +38,21 @@ $padding-base-horizontal:     14px !default;
 
 // Fonts
 
-$font-family:                 "Fira_Sans";
+$font-family:                 "Futura";
 $main-font-path:              "../fonts/#{$font-family}/" !default;
 
 
 @font-face {
   font-family:                $font-family;
-  src:                        url('#{$main-font-path}FiraSans-Regular.ttf') format('truetype');
+  src:                        url('#{$main-font-path}Futura LT Book.ttf') format('truetype');
   font-weight:                normal;
   font-style:                 normal;
 }
 
 @font-face {
   font-family:                $font-family;
-  src:                        url('#{$main-font-path}FiraSans-SemiBold.ttf') format('truetype');
+  src:                        url('#{$main-font-path}Futura LT Medium.ttf') format('truetype');
   font-weight:                bold;
-  font-style:                 normal;
-}
-
-@font-face {
-  font-family:                $font-family;
-  src:                        url('#{$main-font-path}FiraSans-Light.ttf') format('truetype');
-  font-weight:                lighter;
   font-style:                 normal;
 }
 
@@ -128,7 +125,6 @@ $box-info:                    $brand-info;
 $box-success:                 $brand-success;
 $box-warning:                 $brand-warning;
 $box-danger:                  $brand-danger;
-
 
 // Table
 
