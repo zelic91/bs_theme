@@ -9,6 +9,7 @@
 
   > li {
     display: inline-block; // Remove list-style and block-level defaults
+    margin-right: 4px;
     > a,
     > span {
       position: relative;
